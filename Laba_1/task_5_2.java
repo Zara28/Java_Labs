@@ -6,19 +6,40 @@ class task_5_2
 	{
 	Scanner sc = new Scanner(System.in);
 
-	System.out.print("Введите два числа через энтер: ");
+	System.out.print("Введите два числа: ");
 	int f_ch = sc.nextInt();
 	int s_ch = sc.nextInt();
-	if (f_ch%2!=0)
+	if (f_ch%2!=0 && s_ch%2!=0)
 	{
-		System.out.print(f_ch);
+		System.out.print(f_ch + " " + s_ch);
+		return;
 	}
-	else if (s_ch%2!=0)
+	int ans = f_ch%2!=0 ? f_ch : s_ch;  
+	if (ans%2!=0)
 	{
-		System.out.print(s_ch);
+		System.out.print(ans);
+		return;
 	}
-	else{
-		System.out.print("Нечетного числа нет");
+	System.out.print("Нечетного числа нет");
+
+
+
+/*	if (f_ch%2!=0 || s_ch%2!=0)
+	{
+		if (s_ch%2==0)
+		{
+			System.out.print(f_ch);
+			return;
+		}
+		else
+		{
+			System.out.print(s_ch);
+			return;
+		}
+		System.out.print(f_ch + " " + s_ch);
+		return;
 	}
+		System.out.print("Нечетного числа нет");*/
+	
 	}
 }
