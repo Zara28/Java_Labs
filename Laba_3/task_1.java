@@ -19,24 +19,24 @@ class task_1
 			{
 				if(k%3==0)
 				{
-					v = 1;
 					System.out.print("|1|"+"Работа с одномерным массивом\n");
 					System.out.print("2 "+"Работа с двумерным масиивом\n");
 					System.out.print("3 "+"Выйти из программы\n");
+					v = 1;
 				}
 				else if(k%3==1)
 				{
-					v=2;
 					System.out.print("1 "+"Работа с одномерным массивом\n");
 					System.out.print("|2|"+"Работа с двумерным масиивом\n");
 					System.out.print("3 "+"Выйти из программы\n");
+					v=2;
 				}
 				else if(k%3==2)
 				{
-					v=-1;
 					System.out.print("1 "+"Работа с одномерным массивом\n");
 					System.out.print("2 "+"Работа с двумерным масиивом\n");
 					System.out.print("|3|"+"Выйти из программы\n");
+					v=-1;
 				}
 				s = sc.nextLine();
 				if(s.indexOf("W") != -1)

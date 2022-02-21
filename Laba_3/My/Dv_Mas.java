@@ -3,7 +3,7 @@ package My;
 import java.util.Random;
 import My.Odn_Mas;
 public class Dv_Mas extends My.Odn_Mas{
-	int [][] mass;
+	public int [][] mass;
 	int n;
 	public Dv_Mas(int N)
 	{
@@ -19,7 +19,7 @@ public class Dv_Mas extends My.Odn_Mas{
 			}
 		}
 	}
-	void obr()
+	public void obr()
 	{
 		int s1 = 0;
 		int s2 = 0;
@@ -64,7 +64,7 @@ public class Dv_Mas extends My.Odn_Mas{
 			}
 		}
 	}
-	String stroka()
+	public String stroka()
 	{
 	String str = "";
 		for(int i = 0; i<this.n; i++)
