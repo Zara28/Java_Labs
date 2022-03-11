@@ -1,43 +1,45 @@
 import java.util.Scanner;
-import java.util.Random;
-import java.io.InputStreamReader;
-import My.*;
+import Lib.*;
+import Lib.Dv_Mas;
+import Lib.Odn_Mas;
 class task_1
 {
 	public static void main (String[] args)
 	{
 		Scanner sc = new Scanner(System.in);
-		System.out.print("Добро пожаловать! Для перемещения между пунктами меню используйте символы W и S, для выбора нажмите V\n");
+		System.out.print("Р”РѕР±СЂРѕ РїРѕР¶Р°Р»РѕРІР°С‚СЊ! Р’С‹Р±РµСЂРёС‚Рµ РЅСѓР¶РЅСѓСЋ РІР°Рј РѕРїРµСЂР°С†РёСЋ, РІРІРµРґСЏ V. Р”Р»СЏ РїРµСЂРµРєР»СЋС‡РµРЅРёСЏ РѕРїРµСЂР°С†РёР№ РІРІРµРґРёС‚Рµ W РґР»СЏ РІС‹Р±РѕСЂР° СЃР»РµРґСѓСЋС‰РµР№ Рё S - РґР»СЏ РїСЂРµРґС‹РґСѓС‰РµРіРѕ\n");
 		int v = 0;
 		int ras = 0;
 		String s = "";
 		
 		int k = 0;
-		while (v!=-1)
+		do
 		{
 			do 
 			{
-				if(k%3==0)
+				int ost = k%3;
+				switch (ost)
 				{
-					System.out.print("|1|"+"Работа с одномерным массивом\n");
-					System.out.print("2 "+"Работа с двумерным масиивом\n");
-					System.out.print("3 "+"Выйти из программы\n");
+					case 0:
+					System.out.print("|1|"+"РћРґРЅРѕРјРµСЂРЅС‹Р№ РјР°СЃСЃРёРІ\n");
+					System.out.print("2 "+"Р”РІСѓРјРµСЂРЅС‹Р№ РјР°СЃСЃРёРІ\n");
+					System.out.print("3 "+"Р’С‹С…РѕРґ РёР· РїСЂРѕРіСЂР°РјРјС‹\n");
 					v = 1;
-				}
-				else if(k%3==1)
-				{
-					System.out.print("1 "+"Работа с одномерным массивом\n");
-					System.out.print("|2|"+"Работа с двумерным масиивом\n");
-					System.out.print("3 "+"Выйти из программы\n");
+					break;
+					case 1:
+					System.out.print("1 "+"РћРґРЅРѕРјРµСЂРЅС‹Р№ РјР°СЃСЃРёРІ\n");
+					System.out.print("|2|"+"Р”РІСѓРјРµСЂРЅС‹Р№ РјР°СЃСЃРёРІ\n");
+					System.out.print("3 "+"Р’С‹С…РѕРґ РёР· РїСЂРѕРіСЂР°РјРјС‹\n");
 					v=2;
-				}
-				else if(k%3==2)
-				{
-					System.out.print("1 "+"Работа с одномерным массивом\n");
-					System.out.print("2 "+"Работа с двумерным масиивом\n");
-					System.out.print("|3|"+"Выйти из программы\n");
+					break;
+					case 2:
+					System.out.print("1 "+"РћРґРЅРѕРјРµСЂРЅС‹Р№ РјР°СЃСЃРёРІ\n");
+					System.out.print("2 "+"Р”РІСѓРјРµСЂРЅС‹Р№ РјР°СЃСЃРёРІ\n");
+					System.out.print("|3|"+"Р’С‹С…РѕРґ РёР· РїСЂРѕРіСЂР°РјРјС‹\n");
 					v=-1;
+					break;
 				}
+				
 				s = sc.nextLine();
 				if(s.indexOf("W") != -1)
 				{
@@ -54,19 +56,19 @@ class task_1
 				case (-1):
 				break;
 				case (1):
-					System.out.print("\nВведите размер массива ");
+					System.out.print("\nР’РІРµРґРёС‚Рµ СЂР°Р·РјРµСЂ РјР°СЃСЃРёРІР° ");
 					ras = sc.nextInt();
-					Odn_Mas massive = new Odn_Mas(ras);
+					Lib.Odn_Mas massive = new Lib.Odn_Mas(ras);
 					System.out.print(massive.create_stroka(massive.mas, ras));
-					System.out.print("\nКоличество кратных первому элементу "+massive.col_kr()+"\n");
+					System.out.print("\nРљРѕР»РёС‡РµСЃС‚РІРѕ РєСЂР°С‚РЅС‹С… РІ РјР°СЃСЃРёРІРµ СЂР°РІРЅРѕ "+massive.col_kr()+"\n");
 				break;
 				case (2):
-					System.out.print("\nВведите размер массива ");
+					System.out.print("\nР’РІРµРґРёС‚Рµ СЂР°Р·РјРµСЂ РјР°СЃСЃРёРІР° ");
 					ras = sc.nextInt();
-					Dv_Mas mass = new Dv_Mas(ras);
+					Lib.Dv_Mas mass = new Lib.Dv_Mas(ras);
 					System.out.print(mass.stroka()+"\n");
 					mass.obr();
-					System.out.print("\nРезультат\n");
+					System.out.print("\nРћС‚СЃРѕСЂС‚РёСЂРѕРІР°РЅРЅС‹Р№ РјР°СЃСЃРёРІ\n");
 					for(int i = 0; i<ras; i++)
 					{
 						for(int j = 0; j<ras; j++)
@@ -78,7 +80,7 @@ class task_1
 				break;
 			}
 			System.out.print("\n");
-		}
+		} while (v!=-1);
 	}
 }
 

@@ -2,20 +2,20 @@ import java.util.Scanner;
 import java.util.Random;
 class task_1_8
 {
-//Заменить нулями все положительные нечетные элементы под побочной и над главной диагоналями.
+//Р—Р°РјРµРЅРёС‚СЊ РЅСѓР»СЏРјРё РІСЃРµ РїРѕР»РѕР¶РёС‚РµР»СЊРЅС‹Рµ РЅРµС‡РµС‚РЅС‹Рµ СЌР»РµРјРµРЅС‚С‹ РїРѕРґ РїРѕР±РѕС‡РЅРѕР№ Рё РЅР°Рґ РіР»Р°РІРЅРѕР№ РґРёР°РіРѕРЅР°Р»СЏРјРё.
 	public static void main (String[] args)
 	{
 	Scanner sc = new Scanner(System.in);
 	Random random = new Random();
-	System.out.print("Введите 0 для выбора варианта задания массива вручную и 1 для генерации массива ");
+	System.out.print("Enter 0 if you want to enter an array yourself and 1 if you want to generate an array randomly: ");
 	int choose = sc.nextInt();
-	System.out.print("Введите размер массива ");
+	System.out.print("Enter the size of the array  ");
 	int N = sc.nextInt();
 	int [] [] mas;
 	mas = new int [N][N];
 	if (choose==0)
 	{
-		System.out.print("Введите элементы массива \n");
+		System.out.print("Enter array element  \n");
 	for (int i = 0; i<N; i++)
 	{
 		for(int j = 0; j<N; j++)
@@ -23,7 +23,7 @@ class task_1_8
 			mas[i][j] = sc.nextInt();
 			if (mas[i][j] == 0)
 			{
-				System.out.print("Ввод не должен содержать 0!");
+				System.out.print("Element can't be 0!");
 				return;
 			}
 		}
@@ -45,7 +45,7 @@ class task_1_8
 }
 public static void matrix(int [][]mas, int N)
 {
-	System.out.print("Было дано \n");
+	System.out.print("The resulting array  \n");
 	for (int i = 0; i<N; i++)
 		{
 			for(int j = 0; j<N; j++)
@@ -67,7 +67,7 @@ public static void matrix(int [][]mas, int N)
 			}
 			
 		}
-	System.out.print("Результат \n");
+	System.out.print("Result is \n");
 	for (int i = 0; i<N; i++)
 	{
 		for(int j = 0; j<N; j++)
