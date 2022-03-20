@@ -1,7 +1,4 @@
 import java.util.Scanner;
-import Lib.*;
-import Lib.Dv_Mas;
-import Lib.Odn_Mas;
 class task_1
 {
 	public static void main (String[] args)
@@ -17,6 +14,7 @@ class task_1
 		{
 			do 
 			{
+				k = k<0?3+k:k;
 				int ost = k%3;
 				switch (ost)
 				{
@@ -54,7 +52,7 @@ class task_1
 			switch(v)
 			{
 				case (-1):
-				break;
+					continue;
 				case (1):
 					System.out.print("\nВведите размер массива ");
 					ras = sc.nextInt();

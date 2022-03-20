@@ -26,7 +26,7 @@ public class Odn_Mas {
 		}
 		return kol;
 	}
-	public static String create_stroka(int [] mas, int n)
+	public String create_stroka(int [] mas, int n)
 	{
 		String str = "";
 		for (int i = 0; i<n; i++)
